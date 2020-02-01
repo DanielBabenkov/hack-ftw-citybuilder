@@ -1,10 +1,8 @@
 #BlueJ class context
 comment0.target=GeothermalPowerPlant
-comment0.text=\r\n\ A\ Nuclear\ Power\ Plant\r\n\r\n\ @author\ DanielBabenkov\r\n\ @version\ 1\ February\ 2020\r\n
-comment1.params=
-comment1.target=int\ getProduction()
-comment2.params=
-comment2.target=int\ getCost()
-comment3.params=
-comment3.target=double\ getEmissions()
-numComments=4
+comment0.text=\r\n\ A\ Geothermal\ Power\ Plant\r\n\r\n\ @author\ DanielBabenkov\r\n\ @version\ 1\ February\ 2020\r\n
+comment1.params=leftX\ bottomY
+comment1.target=GeothermalPowerPlant(int,\ int)
+comment2.params=g2
+comment2.target=void\ draw(java.awt.Graphics2D)
+numComments=3

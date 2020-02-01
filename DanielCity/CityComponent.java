@@ -27,7 +27,7 @@ public class CityComponent extends JComponent
  
     public CityComponent() {
         this.grid = new Grid();
-        this.buildings = new ArrayList<>();
+        this.buildings = new ArrayList<Building>();
         
         oba = new OneBedroomApartment((80 * 1), (1080 - 80), 2);
         tba = new TwoBedroomApartment((80 * 2), (1080 - 80), 2);

@@ -19,17 +19,15 @@ public class CityViewer
     {
         // create and configure the frame (window) for the program
         JFrame frame = new JFrame();
-        
+        CityComponent component = new CityComponent();
+        frame.add(component);
         frame.setSize(WIDTH, HEIGHT);
         frame.setTitle("City");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setVisible(true);
-        
-        
-        CityComponent component = new CityComponent();
-        frame.add(component);
+    
         while(true)
-        {   
+        {  
             component.nextFrame();
             Thread.sleep(100);
         }

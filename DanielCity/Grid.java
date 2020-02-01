@@ -18,9 +18,9 @@ public class Grid
         Color initColor = g2.getColor();
         g2.setColor(Color.black);
         for(int i = 20; i < 1720; i+=20) {
-            g2.draw(new Line2D.Double(i, 0, i, 1080));
+            g2.draw(new Line2D.Double(i, 0, i, 720));
         }
-        for(int i = 20; i < 1080; i+=20) {
+        for(int i = 20; i < 740; i+=20) {
             g2.draw(new Line2D.Double(0, i, 1720, i));
         }
         // Reset g2 to initial color to minimize side effects of method

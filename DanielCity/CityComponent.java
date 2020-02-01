@@ -4,6 +4,11 @@ import javax.swing.JComponent;
 import java.awt.Color;
 import java.awt.geom.Rectangle2D;
 import java.util.ArrayList;
+import java.awt.event.MouseListener;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseMotionListener;
+import java.awt.geom.Point2D;
+
 /**
  * Component for City
  *
@@ -29,15 +34,86 @@ public class CityComponent extends JComponent
         this.grid = new Grid();
         this.buildings = new ArrayList<Building>();
         
-        oba = new OneBedroomApartment((80 * 1), (1080 - 80), 2);
-        tba = new TwoBedroomApartment((80 * 2), (1080 - 80), 2);
-        npp = new NuclearPowerPlant((80 * 3), (1080 - 80), 2);
-        gpp = new GeothermalPowerPlant((80 * 4), (1080 - 80), 2);
-        spp = new SolarPowerPlant((80 * 5), (1080 - 80), 2);
-        cpp = new CoalPowerPlant((80 * 6), (1080 - 80), 2);
-        dpp = new DieselPowerPlant((80 * 7), (1080 - 80), 2);
-        wpp = new WindPowerPlant((80 * 8), (1080 - 80), 2);
-        stpp = new SolarThermalPowerPlant((80 * 9), (1080 - 80), 2);
+        oba = new OneBedroomApartment((740), (80), 2);
+        tba = new TwoBedroomApartment((740), (240), 2);
+        npp = new NuclearPowerPlant((740), (400), 2);
+        gpp = new GeothermalPowerPlant((740), (560), 2);
+        spp = new SolarPowerPlant((740), (720), 2);
+        cpp = new CoalPowerPlant((740), (880), 2);
+        dpp = new DieselPowerPlant((740), (1040), 2);
+        wpp = new WindPowerPlant((740), (1200), 2);
+        stpp = new SolarThermalPowerPlant((740), (1360), 2);
+
+        MouseListen listener = new MouseListen();
+    }
+
+    public class MouseListen implements MouseListener, MouseMotionListener
+    {
+        public void mousePressed(MouseEvent event)
+        {
+            requestFocusInWindow();
+            Point2D.Double point = new Point2D.Double(event.getX(), event.getY());
+        }
+
+        public void mouseClicked(MouseEvent event)
+        {
+
+        }
+
+        public void mouseExited(MouseEvent event)
+        {
+
+        }
+
+        public void mouseEntered(MouseEvent event)
+        {
+
+        }
+
+        public void mouseMoved(MouseEvent event)
+        {
+
+        }
+
+        public void mouseReleased(MouseEvent event)
+        {
+
+        }
+
+        public void mouseDragged(MouseEvent event)
+        {
+
+        }
+    }
+
+    public long getTotalConsumption()
+    {
+        long totalConsumption = 0;
+        for (Building building: buildings)
+        {
+            totalConsumption += (building.getEnergyConsumption() - building.getEnergyProduction());
+        }
+        return totalConsumption;
+    }
+
+    public double getTotalEmission()
+    {
+        double totalEmission = 0;
+        for (Building building: buildings)
+        {
+            totalEmission += building.getEmissions();
+        }
+        return totalEmission;
+    }
+
+    public long getTotalDailyCost()
+    {
+        long totalDailyCost = 0;
+        for (Building building: buildings)
+        {
+            totalDailyCost += building.getDailyCost();
+        }
+        return totalDailyCost;
     }
     
     @Override

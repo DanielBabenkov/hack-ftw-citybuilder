@@ -10,7 +10,11 @@ import javax.swing.JComponent;
  */
 public class CityComponent extends JComponent
 {
-    public CityComponent() {}
+    // instance variable for everything 
+    
+    public CityComponent() {
+    
+    }
     
     @Override
     public void paintComponent(Graphics g)
@@ -18,7 +22,6 @@ public class CityComponent extends JComponent
         Graphics2D g2 = (Graphics2D) g;
         
         // invoke the draw method on each object in your Cityscape
-        
         
     }
     

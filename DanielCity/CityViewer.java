@@ -26,5 +26,10 @@ public class CityViewer
         
         CityComponent component = new CityComponent();
         frame.add(component);
+        for(int seconds = 0; seconds < 60; seconds++ )
+        {
+            component.nextFrame();
+            Thread.sleep(100);
+        }
     }
 }

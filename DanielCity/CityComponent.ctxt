@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=CityComponent
+comment0.text=\r\n\ Component\ for\ City\r\n\r\n\ @author\ DanielBabenkov\r\n\ @version\ 1\ February\ 2020\r\n
+comment1.params=
+comment1.target=CityComponent()
+comment2.params=g
+comment2.target=void\ paintComponent(java.awt.Graphics)
+comment3.params=
+comment3.target=void\ nextFrame()
+numComments=4

@@ -22,4 +22,7 @@ public class OneBedroomApartment extends Building
         Rectangle house = new Rectangle(getBottomY() - 20, getLeftX(), getWidth(), getHeight());
         g2.fill(house);
     }
+    public String getName() {
+        return "One Bedroom Apartments(10)";
+    }
 }

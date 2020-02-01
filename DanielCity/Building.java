@@ -89,5 +89,7 @@ public abstract class Building
      * @param g2 the Graphics2D object to draw on
      */
     public abstract void draw(Graphics2D g2);
+    
+    public abstract String getName();
 }
 

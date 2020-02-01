@@ -11,8 +11,8 @@ import java.awt.Graphics2D;
  */
 public class TwoBedroomApartment extends Building
 {
-    private static final long ENERGY_CONSUMPTION = 160;
-    private static final long EMISSIONS_PER_MWH = 1500;
+    private static final long ENERGY_CONSUMPTION = 500;
+    private static final long EMISSIONS_PER_MWH = 2500;
     public TwoBedroomApartment(int leftX, int bottomY) {
         super(ENERGY_CONSUMPTION, 0, EMISSIONS_PER_MWH, 0, bottomY, leftX, 20, 20);
     }
@@ -21,5 +21,8 @@ public class TwoBedroomApartment extends Building
         g2.setColor(brick);
         Rectangle house = new Rectangle(getBottomY() - 20, getLeftX(), getWidth(), getHeight());
         g2.fill(house);
+    }
+    public String getName() {
+        return "Two Bedroom Apartments(10)";
     }
 }

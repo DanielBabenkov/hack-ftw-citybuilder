@@ -11,16 +11,20 @@ import java.awt.Graphics2D;
  */
 public class DieselPowerPlant extends Building
 {
-    private static final long DAILY_PRODUCTION_IN_MWH = 30000;
+    private static final long DAILY_PRODUCTION_IN_MWH = 50000;
+    private static final long DAILY_CONSUMPTION_IN_MWH = 30000;
     private static final long COST_PER_MWH = 60;
     private static final double EMISSIONS_PER_MWH = 0.49;
     
     public DieselPowerPlant(int leftX, int bottomY) {
-        super(0, DAILY_PRODUCTION_IN_MWH, EMISSIONS_PER_MWH, COST_PER_MWH, bottomY, leftX, 40, 40);
+        super(DAILY_CONSUMPTION_IN_MWH, DAILY_PRODUCTION_IN_MWH, EMISSIONS_PER_MWH, COST_PER_MWH, bottomY, leftX, 40, 40);
     }
     public void draw(Graphics2D g2) {
-        g2.setColor(Color.DARK_GRAY);
+        g2.setColor(Color.YELLOW);
         Rectangle plant = new Rectangle(getBottomY() - 20, getLeftX(), getWidth(), getHeight());
         g2.fill(plant);
+    }
+    public String getName() {
+        return "Diesel Power Plant";
     }
 }

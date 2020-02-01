@@ -12,7 +12,8 @@ public class CityComponent extends JComponent
 {
     // instance variable for everything 
     
-    public CityComponent() {
+    public CityComponent() 
+    {
     
     }
     

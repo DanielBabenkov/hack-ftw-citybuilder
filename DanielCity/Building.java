@@ -16,7 +16,8 @@ public abstract class Building
     private int width;
     private int height;
     private int bottomY;
-    private int leftX;  
+    private int leftX;
+    private int type;
     public Building()
     {
         this.energyConsumption = 0;
@@ -29,7 +30,7 @@ public abstract class Building
     }
 
     public Building(long energyConsumption, long energyProduction, double emissions,
-    long costPerMWH, int bottomY, int leftX, int width, int height) {
+                    long costPerMWH, int bottomY, int leftX, int width, int height, int type) {
         this.energyConsumption = energyConsumption;
         this.energyProduction = energyProduction;
         this.costPerMWH = costPerMWH;
@@ -37,8 +38,13 @@ public abstract class Building
         this.leftX = leftX;
         this.width = width;
         this.height = height;
+        this.type = type;
     }
 
+    public int getType() {
+        return this.type;
+    }
+    
     public long getEnergyConsumption() {
         return this.energyConsumption;
     }

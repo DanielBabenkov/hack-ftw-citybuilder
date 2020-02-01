@@ -17,8 +17,8 @@ public class CoalPowerPlant extends Building
     private int height = 20;
     private int width = 40;
     
-    public CoalPowerPlant(int leftX, int bottomY) {
-        super(0, DAILY_PRODUCTION_IN_MWH, EMISSIONS_PER_MWH, COST_PER_MWH, bottomY, leftX, 40, 40);
+    public CoalPowerPlant(int leftX, int bottomY, int type) {
+        super(0, DAILY_PRODUCTION_IN_MWH, EMISSIONS_PER_MWH, COST_PER_MWH, bottomY, leftX, 40, 40, type);
     }
     public void draw(Graphics2D g2) {
         g2.setColor(Color.DARK_GRAY);

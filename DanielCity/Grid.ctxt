@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=Grid
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ Grid\ here.\r\n\r\n\ @author\ (your\ name)\r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=g2
+comment1.target=void\ draw(java.awt.Graphics2D)
+comment1.text=\r\n\ A\ 86x54\ grid\ filled\ with\ 20x20\ pixel\ squares.\r\n
+numComments=2

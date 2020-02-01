@@ -10,41 +10,46 @@ import java.awt.Color;
 
 public class CityCalculations extends JPanel
 {
-    private JLabel consumption;
-    private JLabel production;
-    private JLabel emissions;
-    private JLabel dailyCost;
+    private long consumption;
+    private double emissions;
+    private long dailyCost;
+    private JLabel consumeText;
+    private JLabel emissionText;
+    private JLabel dailyCostText;
 
     public CityCalculations()
     {
         this.setPreferredSize(new Dimension(200,200));
         this.setBorder(BorderFactory.createLineBorder(Color.black));
         this.setBackground(Color.white);
-        
-        this.consumption = new JLabel("Consumption: 0");
-        this.production = new JLabel("Production: 0");
-        this.emissions = new JLabel("Emissions: 0");
-        this.dailyCost = new JLabel("Daily Cost: 0");
 
-        this.consumption.setAlignmentX(CENTER_ALIGNMENT);
-        this.production.setAlignmentX(CENTER_ALIGNMENT);
-        this.emissions.setAlignmentX(CENTER_ALIGNMENT);
-        this.dailyCost.setAlignmentX(CENTER_ALIGNMENT);
-    }
+        this.consumption = 0;
+        this.emissions = 0;
+        this.dailyCost = 0;
 
-    public void update()
-    {
-        
+        this.consumeText = new JLabel("Net Consumption: 0");
+        this.emissionText = new JLabel("Emissions: 0");
+        this.dailyCostText = new JLabel("Daily Cost: 0");
+
+        consumeText.setAlignmentX(CENTER_ALIGNMENT);
+        emissionText.setAlignmentX(CENTER_ALIGNMENT);
+        dailyCostText.setAlignmentX(CENTER_ALIGNMENT);
+
         this.setLayout(new BoxLayout(this, BoxLayout.PAGE_AXIS));
-        this.add(this.consumption);
+
+        this.add(consumeText);
         this.add(Box.createRigidArea(new Dimension(0,10)));
-        this.add(this.production);
+        this.add(emissionText);
         this.add(Box.createRigidArea(new Dimension(0,10)));
-        this.add(this.emissions);
-        this.add(Box.createRigidArea(new Dimension(0,10)));
-        this.add(this.dailyCost);
+        this.add(dailyCostText);
         this.add(Box.createRigidArea(new Dimension(0,10)));
     }
 
+    public void update(long addConsumption, double addEmissions, long addDailyCost)
+    {
+        consumeText.setText("Net Consumption: " + (this.consumption += addConsumption));
+        emissionText.setText("Emissions: " + (this.emissions += addEmissions));
+        dailyCostText.setText("Daily Cost: " + (this.dailyCost += addDailyCost));
 
     }
+}

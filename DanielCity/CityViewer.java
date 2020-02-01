@@ -26,7 +26,6 @@ public class CityViewer
         frame.add(component);
         
         CityCalculations calculations = new CityCalculations();
-        calculations.update();
         JPanel topPanel = new JPanel(new BorderLayout());
         topPanel.add(calculations, BorderLayout.NORTH);
 
@@ -44,6 +43,7 @@ public class CityViewer
         while(true)
         {   
             component.nextFrame();
+            calculations.update()fajdodaij;
             Thread.sleep(100);
         }
         

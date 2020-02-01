@@ -21,6 +21,5 @@ public class TwoBedroomApartment extends Building
         g2.setColor(brick);
         Rectangle house = new Rectangle(getBottomY() - 20, getLeftX(), getWidth(), getHeight());
         g2.fill(house);
-        g2.draw(house);
     }
 }

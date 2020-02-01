@@ -11,17 +11,17 @@ import javax.swing.JComponent;
 public class CityComponent extends JComponent
 {
     // instance variable for everything 
-    
+
     public CityComponent() {
-    
+        
     }
     
     @Override
     public void paintComponent(Graphics g)
     {
-        Graphics2D g2 = (Graphics2D) g;
         
-        // invoke the draw method on each object in your Cityscape
+        
+        // invoke the draw method on each object in your City
         
     }
     
@@ -31,8 +31,8 @@ public class CityComponent extends JComponent
         // update the objects in the cityscape so they are animated
         
         
-        // request that the Java Runtime repaints this component by invoking its paintComponent method
-        //  do not explicitly invoke the paintComponent method
+        // request that the Java Runtime repaints this component by invoking
+        //  its paintComponent method. Do not explicitly invoke the paintComponent method
         repaint();
     }
 }

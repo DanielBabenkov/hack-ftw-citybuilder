@@ -1,8 +1,8 @@
 #BlueJ class context
 comment0.target=DieselPowerPlant
 comment0.text=\r\n\ A\ Diesel\ Power\ Plant\r\n\r\n\ @author\ DanielBabenkov\r\n\ @version\ 1\ February\ 2020\r\n
-comment1.params=leftX\ bottomY
-comment1.target=DieselPowerPlant(int,\ int)
+comment1.params=leftX\ bottomY\ type
+comment1.target=DieselPowerPlant(int,\ int,\ int)
 comment2.params=g2
 comment2.target=void\ draw(java.awt.Graphics2D)
 numComments=3

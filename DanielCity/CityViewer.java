@@ -39,11 +39,11 @@ public class CityViewer
         frame.setTitle("City");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setVisible(true);
-        
+    
         while(true)
-        {   
+        {  
             component.nextFrame();
-            calculations.update()fajdodaij;
+            calculations.update();
             Thread.sleep(100);
         }
         

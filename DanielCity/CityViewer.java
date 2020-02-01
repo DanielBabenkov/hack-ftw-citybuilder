@@ -7,8 +7,8 @@ import javax.swing.JFrame;
  */
 public class CityViewer
 {
-    public static final int WIDTH = 1720;
-    public static final int HEIGHT = 1080;
+    public static final int WIDTH = 1720; // 86 squares
+    public static final int HEIGHT = 1080;// 54 squares
     /**
      * main method for the program which creates and configures the frame for the program
      * 
@@ -23,11 +23,13 @@ public class CityViewer
         frame.setSize(WIDTH, HEIGHT);
         frame.setTitle("City");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setVisible(true);
+        
         
         CityComponent component = new CityComponent();
         frame.add(component);
-        for(int seconds = 0; seconds < 60; seconds++ )
-        {
+        while(true)
+        {   
             component.nextFrame();
             Thread.sleep(100);
         }

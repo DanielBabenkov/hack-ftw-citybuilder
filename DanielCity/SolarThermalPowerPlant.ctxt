@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.target=SolarThermalPowerPlant
+comment0.text=\r\n\ A\ SolarThermal\ Power\ Plant\r\n\r\n\ @author\ DanielBabenkov\r\n\ @version\ 1\ February\ 2020\r\n
+comment1.params=leftX\ bottomY
+comment1.target=SolarThermalPowerPlant(int,\ int)
+comment2.params=g2
+comment2.target=void\ draw(java.awt.Graphics2D)
+numComments=3

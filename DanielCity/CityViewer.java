@@ -10,8 +10,8 @@ import java.awt.Color;
  */
 public class CityViewer
 {
-    public static final int WIDTH = 1420;
-    public static final int HEIGHT = 700;
+    public static final int WIDTH = 1720; // 86 squares
+    public static final int HEIGHT = 1080;// 54 squares
     /**
      * main method for the program which creates and configures the frame for the program
      * 
@@ -21,13 +21,10 @@ public class CityViewer
     public static void main(String[] args) throws InterruptedException
     {
         // create and configure the frame (window) for the program
-        JFrame frame = new JFrame();
-        JPanel background = new JPanel();
-        background.setBackground(Color.blue);
+        JFrame frame = new JFrame();;
         CityComponent component = new CityComponent();
-        component.add(background);
         frame.add(component);
-        /*
+        
         CityCalculations calculations = new CityCalculations();
         calculations.update();
         JPanel topPanel = new JPanel(new BorderLayout());
@@ -38,18 +35,17 @@ public class CityViewer
 
         frame.getContentPane().add(mainPanel);
         frame.pack();
-        */
+        
         frame.setSize(WIDTH, HEIGHT);
         frame.setTitle("City");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setVisible(true);
         
-        /*
-        for(int seconds = 0; seconds < 60; seconds++ )
-        {
-            calculations.nextFrame();
+        while(true)
+        {   
+            component.nextFrame();
             Thread.sleep(100);
         }
-        */
+        
     }
 }
